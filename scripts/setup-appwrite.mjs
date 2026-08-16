@@ -29,7 +29,7 @@ const databases = new Databases(client);
 const storage = new Storage(client);
 const project = new Project(client);
 
-const DATABASE_ID = 'mystuffsbetter';
+const DATABASE_ID = process.env.VITE_APPWRITE_DATABASE_ID || 'mystuffsbetter';
 const BINDERS_COLLECTION_ID = 'binders';
 const CARDS_COLLECTION_ID = 'cards';
 const BUCKET_ID = 'binder-images';

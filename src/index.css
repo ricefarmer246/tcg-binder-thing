@@ -1,10 +1,23 @@
 @import "tailwindcss";
 
-:root {
-  color-scheme: light dark;
-}
+body { margin: 0; font-family: system-ui, 'Segoe UI', Roboto, sans-serif; }
 
-body {
-  margin: 0;
-  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
-}
+.brand-ball { position: relative; display: inline-block; width: 1.25rem; height: 1.25rem; border: 3px solid #182033; border-radius: 999px; background: linear-gradient(#ef4444 0 46%, #f8fafc 46%); }
+.brand-ball::after { position: absolute; top: 50%; left: 50%; width: .4rem; height: .4rem; content: ''; transform: translate(-50%, -50%); border: 2px solid #182033; border-radius: 999px; background: #fff; }
+.pokemon-page { background: url('/bulbagarden-backdrop.svg') center top / cover fixed, radial-gradient(circle at 12% 0%, #fff4cb 0, transparent 30rem), #fffaf0; }
+.guest-hero { position: relative; overflow: hidden; border: 1px solid #e9a936; background: linear-gradient(125deg, #ffe58b, #f9c74f 50%, #f08a4b); box-shadow: inset 0 1px #fff8d5; }
+.guest-hero::after { position: absolute; top: -10rem; right: -6rem; width: 22rem; height: 22rem; content: ''; border: 2.5rem solid rgb(255 255 255 / .23); border-radius: 999px; }
+.guest-decal-cluster { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: .55rem; margin-top: 2rem; }
+
+/* Individual Bulbagarden type icons supplied for this project. */
+.type-decal { display: inline-flex; align-items: center; gap: .35rem; height: 2rem; padding: 0 .65rem 0 .25rem; color: #fff; border-radius: 999px; font-size: .72rem; font-weight: 800; line-height: 1; box-shadow: inset 0 1px rgb(255 255 255 / .28), 0 2px 5px rgb(15 23 42 / .18); }
+.type-logo { display: block; width: 1.6rem; height: 1.6rem; background-repeat: no-repeat; background-position: center; background-size: contain; }
+.type-logo-normal { background-image: url('/type-icons/normal.png'); }.type-logo-fire { background-image: url('/type-icons/fire.png'); }.type-logo-water { background-image: url('/type-icons/water.png'); }.type-logo-grass { background-image: url('/type-icons/grass.png'); }.type-logo-lightning { background-image: url('/type-icons/lightning.png'); }.type-logo-psychic { background-image: url('/type-icons/psychic.png'); }.type-logo-fighting { background-image: url('/type-icons/fighting.png'); }.type-logo-flying { background-image: url('/type-icons/flying.png'); }.type-logo-poison { background-image: url('/type-icons/poison.png'); }.type-logo-ground { background-image: url('/type-icons/ground.png'); }.type-logo-bug { background-image: url('/type-icons/bug.png'); }.type-logo-ghost { background-image: url('/type-icons/ghost.png'); }.type-logo-metal { background-image: url('/type-icons/metal.png'); }.type-logo-ice { background-image: url('/type-icons/ice.png'); }.type-logo-dragon { background-image: url('/type-icons/dragon.png'); }.type-logo-fairy { background-image: url('/type-icons/fairy.png'); }.type-logo-stellar { background-image: url('/type-icons/stellar.png'); }
+.type-decal-small { width: 1.5rem; min-width: 1.5rem; height: 1.5rem; padding: 0; }.type-decal-small .type-logo { width: 1.25rem; height: 1.25rem; }
+.type-normal { background: #7c7f87; }.type-fire { background: #e65835; }.type-water { background: #3b91d8; }.type-grass { background: #4f9f61; }.type-lightning { background: #d69b10; }.type-psychic { background: #ad63b5; }.type-fighting { background: #ac5247; }.type-flying { background: #6fb5e2; }.type-poison { background: #8a5297; }.type-ground { background: #a96a36; }.type-bug { background: #719932; }.type-ghost { background: #5b577c; }.type-metal { background: #83919e; }.type-ice { background: #56b8c8; }.type-dragon { background: #596fca; }.type-fairy { background: #d864c0; }.type-stellar { background: #43aa93; }
+
+.binder-page { background: linear-gradient(130deg, #25324c, #162238); box-shadow: inset 0 0 0 3px #455573, inset 0 0 0 7px #152137, 0 12px 24px rgb(15 23 42 / .14); }
+.pokemon-card { min-width: 0; overflow: hidden; border: 2px solid #e9d18d; border-radius: .75rem; padding: .55rem; background: linear-gradient(145deg, #fff9de, #f5dc94); box-shadow: 0 2px 4px rgb(0 0 0 / .22); }
+.pokemon-card-art { display: flex; min-height: 7rem; margin: .5rem 0; align-items: center; justify-content: center; border: 1px solid #d5ad57; border-radius: .45rem; background: radial-gradient(circle at 30% 25%, rgb(255 255 255 / .85), transparent 20%), linear-gradient(135deg, #ffe992, #f9bd50); }
+.pokemon-card-art .type-decal { transform: scale(1.02); }
+.landing-decal { border: 2px solid #efcc71; background: radial-gradient(circle at 40% 30%, #fff9d8, #f8d46a); box-shadow: 0 3px 0 #dba633; }

@@ -10,6 +10,7 @@ import { BinderView } from './pages/BinderView';
 import { PublicBinder } from './pages/PublicBinder';
 import { NotFound } from './pages/NotFound';
 import { ConfigWarning } from './components/ConfigWarning';
+import { GuestBinder } from './pages/GuestBinder';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/" element={<Landing />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
+            <Route path="/guest" element={<GuestBinder />} />
             <Route path="/share/:binderId" element={<PublicBinder />} />
             <Route
               path="/binders"

@@ -1,7 +1,9 @@
 import { isAppwriteConfigured } from '../lib/appwrite';
+import { useLocation } from 'react-router-dom';
 
 export function ConfigWarning() {
-  if (isAppwriteConfigured) return null;
+  const { pathname } = useLocation();
+  if (isAppwriteConfigured || pathname === '/guest') return null;
 
   return (
     <div className="bg-amber-50 px-4 py-2 text-center text-sm text-amber-800">
